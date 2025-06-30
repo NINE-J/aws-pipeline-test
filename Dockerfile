@@ -58,8 +58,8 @@ COPY --from=builder /app/src/main/resources/static /app/static
 # 포트 노출
 EXPOSE 8080
 
-# curl 설치
-RUN apk update && apk add curl
+# ECS 헬스 체크 활성화를 위해 curl 설치 추가
+RUN apk update && apk add --no-cache curl
 
 # 애플리케이션 실행
 ENTRYPOINT ["java", "-jar", "app.jar"] 

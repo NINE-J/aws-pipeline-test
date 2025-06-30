@@ -73,7 +73,7 @@
       "systemControls": []
     }
   ],
-  "family": "chap02-task-definition",
+  "family": "chap02-task-definition-1",
   "executionRoleArn": "arn:aws:iam::745208956218:role/ecsTaskExecutionRole",
   "networkMode": "bridge",
   "volumes": [],
