@@ -58,5 +58,8 @@ COPY --from=builder /app/src/main/resources/static /app/static
 # 포트 노출
 EXPOSE 8080
 
+# curl 설치
+RUN apk update && apk add curl
+
 # 애플리케이션 실행
 ENTRYPOINT ["java", "-jar", "app.jar"] 
